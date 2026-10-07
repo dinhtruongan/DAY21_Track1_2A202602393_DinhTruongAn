@@ -94,4 +94,5 @@ Các nhãn mức độ và biện pháp trong bảng là phân tích của tôi.
 
 ## 5. AI Support Log
 
-Tôi sử dụng Codex để hỗ trợ tìm nguồn, tổng hợp theo mẫu README và kiểm tra đủ 11 trường Harm Map. Khi soạn bài, tôi yêu cầu tách số liệu kiểm tra khỏi xác suất tuyển dụng và phân biệt kết quả nghiên cứu với harm ngoài thực tế. Các đánh giá định tính là phần phân tích trong báo cáo; không bổ sung dữ liệu ứng viên hoặc kết quả không có nguồn.
+Tôi sử dụng Codex để hỗ trợ tìm nguồn, tổng hợp theo mẫu README và kiểm tra đủ 11 trường Harm Map. Điểm được chỉnh khi tổng hợp là tách số liệu kiểm tra khỏi xác suất tuyển dụng và phân biệt kết quả nghiên cứu với harm ngoài thực tế. Các đánh giá định tính là phần phân tích trong báo cáo; không bổ sung dữ liệu ứng viên hoặc kết quả không có nguồn.
+
