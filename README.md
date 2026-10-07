@@ -12,7 +12,7 @@ Hai case dưới đây là hai nghiên cứu thực nghiệm khác nhau, sử d�
 
 | Nội dung | Đánh giá của tôi và lý do |
 | --- | --- |
-| Những tác hại chính có thể xảy ra | Ứng viên bị mất cơ hội phỏng vấn khi AI xếp hạng dựa trên dấu hiệu nhân khẩu học thay vì năng lực. Lý do đánh giá thiếu căn cứ có thể làm tổn hại phẩm giá. CV còn có nguy cơ bị sử dụng hoặc chia sẻ ngoài mục đích tuyển dụng. Doanh nghiệp có thể bỏ sót ứng viên phù hợp. |
+| Những tác hại chính có thể xảy ra | **Nguy cơ ở cấp ngành:** ứng viên có thể mất cơ hội phỏng vấn nếu quyết định loại dựa trên thứ hạng thiên lệch. Đánh giá thiếu căn cứ có thể tổn hại phẩm giá; sử dụng CV ngoài mục đích có thể gây mất riêng tư. Đây là các nguy cơ phân tích, không phải hậu quả đã được hai nghiên cứu xác nhận. |
 | Mức độ high-stakes | **Cao.** Sàng lọc là cửa vào cơ hội việc làm và thu nhập. Người bị loại có thể không biết quyết định dựa trên AI hoặc không có cách yêu cầu xem xét lại. |
 | Dữ liệu nhạy cảm có thể được sử dụng | Thông tin liên hệ, lịch sử làm việc, học vấn; dấu hiệu về tuổi, giới, sức khỏe/khuyết tật, chủng tộc hoặc tổ chức cộng đồng. Tôi chỉ phân tích nhóm dữ liệu, không đưa CV hay thông tin ứng viên thật vào repo. |
 | Nhu cầu human review | **Cao.** Người tuyển dụng phải kiểm tra căn cứ gắn với yêu cầu công việc trước quyết định loại; người phụ trách chất lượng kiểm tra mẫu hồ sơ bị AI đánh giá thấp và chênh lệch giữa nhóm. Cần quyền sửa/ghi đè và kênh yêu cầu xem xét lại. Việc có người duyệt chỉ hữu ích khi họ kiểm tra độc lập. |
@@ -35,11 +35,11 @@ Các nhãn mức độ và biện pháp trong bảng là phân tích của tôi.
 
 | Trường | Phân tích của tôi |
 | --- | --- |
-| High-risk moment | Người tuyển dụng dùng thứ hạng CV để chọn shortlist hoặc loại hồ sơ mà không xem căn cứ độc lập. |
+| High-risk moment | **Tình huống triển khai giả định:** người tuyển dụng dùng thứ hạng CV để loại hồ sơ mà không kiểm tra độc lập. Nghiên cứu không xác nhận bước loại này đã diễn ra tại doanh nghiệp. |
 | Stakeholder bị ảnh hưởng | Ứng viên có dấu hiệu khuyết tật trong hồ sơ; người tuyển dụng; doanh nghiệp; bộ phận giám sát chất lượng tuyển dụng. |
 | Failure mode | **Bias / fairness.** Nguy cơ bổ sung: over-reliance nếu người duyệt xem thứ hạng như đánh giá khách quan. |
 | Layer bắt đầu lỗi | **Model** là giả thuyết phù hợp từ hành vi đầu ra. **Grounding** liên quan tới hướng dẫn đánh giá, nhưng chưa đủ bằng chứng xác định nguyên nhân bên trong mô hình. |
-| Harm xảy ra là gì? | Đã quan sát bất lợi trong xếp hạng thí nghiệm. **Nguy cơ:** ứng viên mất cơ hội khi shortlist phụ thuộc kết quả đó; chưa có số liệu về người mất việc hoặc thiệt hại thu nhập thực tế. |
+| Harm xảy ra là gì? | **Đã quan sát:** kết quả xếp hạng bất lợi trong thí nghiệm. **Chưa xác nhận:** ứng viên thực tế bị từ chối hoặc mất thu nhập. **Tác hại giả định:** mất cơ hội phỏng vấn nếu doanh nghiệp dùng kết quả đó để loại hồ sơ. |
 | Harm lens | **Opportunity loss** là nguy cơ chính; **dignity loss** nếu đánh giá năng lực bị quy về thuộc tính cá nhân. |
 | Severity | **High**, theo đánh giá của tôi, nếu quyết định loại ảnh hưởng đến cơ hội việc làm. Không xếp Critical vì case không chứng minh tổn hại thể chất nghiêm trọng. |
 | Scale | Phạm vi được nguồn báo cáo là thí nghiệm ở Brief Case. Quy mô ứng viên bị ảnh hưởng ngoài thực tế **chưa đủ dữ liệu**. |
@@ -67,11 +67,11 @@ Các nhãn mức độ và biện pháp trong bảng là phân tích của tôi.
 
 | Trường | Phân tích của tôi |
 | --- | --- |
-| High-risk moment | Hệ thống chọn top-k CV để chuyển sang phỏng vấn; người tuyển dụng chỉ đọc danh sách được hệ thống đưa lên. |
+| High-risk moment | **Trong thí nghiệm:** lựa chọn CV theo xếp hạng truy hồi. **Tình huống triển khai giả định:** recruiter chỉ đọc top-k và bỏ qua các hồ sơ còn lại. Nguồn không đo hành vi này ở recruiter thực tế. |
 | Stakeholder bị ảnh hưởng | Ứng viên thuộc nhóm bị xếp hạng bất lợi; người tuyển dụng; nhà cung cấp mô hình; doanh nghiệp dùng dịch vụ. |
 | Failure mode | **Bias / fairness.** Over-reliance là nguy cơ của bước sử dụng điểm số, chưa phải hành vi recruiter được nghiên cứu này đo. |
 | Layer bắt đầu lỗi | **Model**, xét biểu diễn embedding và hành vi xếp hạng; chưa đủ căn cứ quy lỗi cho một tập dữ liệu huấn luyện cụ thể. Cách dùng điểm để loại hồ sơ là rủi ro thiết kế **UX/Safety** cần kiểm soát thêm. |
-| Harm xảy ra là gì? | Đã đo chênh lệch lựa chọn trong thí nghiệm. **Nguy cơ:** ứng viên phù hợp không vào shortlist chỉ vì tín hiệu từ tên. Chưa chứng minh số người mất cơ hội việc làm khi doanh nghiệp triển khai. |
+| Harm xảy ra là gì? | **Đã quan sát:** chênh lệch lựa chọn giữa các nhóm trong thí nghiệm. **Chưa xác nhận:** người thật mất cơ hội việc làm. **Tác hại giả định:** hồ sơ phù hợp có thể bị bỏ khỏi shortlist nếu thiên lệch này tồn tại trong hệ thống triển khai. |
 | Harm lens | **Opportunity loss**; **dignity loss** nếu giá trị của ứng viên bị thay thế bằng tín hiệu nhóm xã hội. |
 | Severity | **High**, theo đánh giá của tôi, khi thứ hạng quyết định cơ hội phỏng vấn. Nếu chỉ dùng để tổ chức hồ sơ và mọi CV vẫn được đánh giá độc lập, tác động có thể thấp hơn. |
 | Scale | Phạm vi khảo sát được nêu trong Brief Case. Không coi số CV mẫu là số người chịu thiệt hại hoặc đại diện toàn thị trường tuyển dụng. |
@@ -87,12 +87,12 @@ Các nhãn mức độ và biện pháp trong bảng là phân tích của tôi.
 | --- | --- | --- |
 | Cơ chế | LLM sinh thứ hạng và giải thích | Embedding phục vụ truy hồi/xếp hạng |
 | Dấu hiệu cần kiểm tra | Thông tin liên quan khuyết tật | Tên gợi nhóm nhân khẩu học |
-| Điểm chuyển từ lỗi sang harm | Recruiter dùng thứ hạng để loại | Shortlist chỉ lấy top-k |
+| Điều kiện có thể chuyển lỗi thành harm — giả định triển khai | Recruiter dùng thứ hạng để loại | Shortlist chỉ lấy top-k, không kiểm tra hồ sơ ngoài danh sách |
 | Điều chưa chứng minh | Thiệt hại tuyển dụng thực tế | Tác động trong hệ thống doanh nghiệp và bối cảnh Việt Nam |
 
 **Ưu tiên của tôi:** trước khi để AI ảnh hưởng quyết định loại, kiểm tra hồ sơ tương đương, kiểm tra mẫu ngoài shortlist và yêu cầu người duyệt ghi căn cứ gắn với công việc. Nếu phát hiện chênh lệch chưa giải thích được, dừng dùng điểm AI để loại hồ sơ cho tới khi điều tra và đánh giá lại.
 
 ## 5. AI Support Log
 
-Tôi sử dụng Codex để hỗ trợ tìm nguồn, tổng hợp theo mẫu README và kiểm tra đủ 11 trường Harm Map. Điểm được chỉnh khi tổng hợp là tách số liệu kiểm tra khỏi xác suất tuyển dụng và phân biệt kết quả nghiên cứu với harm ngoài thực tế. Các đánh giá định tính là phần phân tích trong báo cáo; không bổ sung dữ liệu ứng viên hoặc kết quả không có nguồn.
+Codex hỗ trợ tìm nguồn và soạn bản nháp theo mẫu lab. Bản nháp được sửa để ghi rõ kết quả thí nghiệm, tác hại giả định và giới hạn của số liệu.
 
